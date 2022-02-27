@@ -5,8 +5,16 @@
       <map>
         <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/drawable/backspace.xml" value="0.2145" />
         <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/drawable/circle_button.xml" value="0.2145" />
-        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-land/activity_main.xml" value="0.25885416666666666" />
-        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-land/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-land/activity_main_large.xml" value="0.2" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-land/activity_main_normal.xml" value="0.4" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-land/activity_main_small.xml" value="0.264" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-large/activity_main_large.xml" value="0.10400000000000001" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-normal/activity_main.xml" value="0.152" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-normal/activity_main_normal.xml" value="0.2" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-small/activity_main_small.xml" value="0.38125" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-xlarge/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout/activity_main.xml" value="0.16" />
       </map>
     </option>
   </component>
@@ -15,5 +23,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.10400000000000001" />
+      </ProjectState>
+    </option>
   </component>
 </project>

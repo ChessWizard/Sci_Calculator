@@ -74,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
         // Bundan dolayi program cokuyordu!
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
             binding.secondPower.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(192,230,209)));
-            binding.thirdPower.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(192,230,209)));
             binding.index.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(192,230,209)));
             binding.factorial.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(192,230,209)));
             binding.adjustableindex.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(192,230,209)));
@@ -233,6 +232,7 @@ public class MainActivity extends AppCompatActivity {
         // Ek kutuphanemiz icerisindeki bir siniftan nesne olusturduk.
 
         Expression expression = new Expression(userExp);// Kullanicinin tanimi(islemi) constructor parametresi olarak alinir.
+
         String result = String.valueOf(expression.calculate());// Ek kutuphane sayesinde girilen sonuc ne olursa olsun hesaplansin ve String'e Parse edilsin.
         binding.valueText.setText(result);// Son olarak bu hesaplanan sonuc goruntulensin.
         binding.valueText.setSelection(result.length());// Imlecimizin konumunu da en saga ayarliyoruz son olarak.
@@ -267,10 +267,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void second_power(View view){
         updateText("^(2)");
-    }
-
-    public void third_power(View view){
-        updateText("^(3)");
     }
 
     public void index(View view){
