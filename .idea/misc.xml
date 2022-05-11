@@ -5,16 +5,26 @@
       <map>
         <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/drawable/backspace.xml" value="0.2145" />
         <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/drawable/circle_button.xml" value="0.2145" />
-        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-land/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/drawable/ic_calculator_svg.xml" value="0.1" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/drawable/ic_integral_calculation.xml" value="0.1" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/drawable/ic_integral_svg.xml" value="0.152" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-land/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-land/activity_main_large.xml" value="0.2" />
         <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-land/activity_main_normal.xml" value="0.4" />
         <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-land/activity_main_small.xml" value="0.264" />
-        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-large/activity_main_large.xml" value="0.10400000000000001" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-large/activity_main_large.xml" value="0.264" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-normal/activity_integral.xml" value="0.264" />
         <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-normal/activity_main.xml" value="0.152" />
         <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-normal/activity_main_normal.xml" value="0.2" />
-        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-small/activity_main_small.xml" value="0.38125" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-normal/activity_main_normal_landscape.xml" value="0.2" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-small/activity_main_small.xml" value="0.152" />
         <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout-xlarge/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout/activity_integral.xml" value="0.2" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout/activity_integral_calculation.xml" value="0.1" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout/fragment_classical.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/layout/fragment_integral.xml" value="0.2" />
+        <entry key="..\:/Users/chess/AndroidStudioProjects/Sci_Calculator/app/src/main/res/menu/calculus_menu.xml" value="0.2" />
       </map>
     </option>
   </component>
@@ -27,7 +37,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.10400000000000001" />
+        <option name="scale" value="0.176" />
       </ProjectState>
     </option>
   </component>

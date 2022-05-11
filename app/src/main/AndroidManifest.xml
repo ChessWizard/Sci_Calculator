@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sci_Calculator">
         <activity
+            android:name=".IntegralActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IntegralCalculation"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

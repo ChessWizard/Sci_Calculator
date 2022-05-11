@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".IntegralActivity">
+
+    <TableLayout
+        android:id="@+id/integraltableLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!--style="?android:attr/borderlessButtonStyle" -> butonlarin kenarliklarini yok eder. Yeni guncellemeden donsra styles dosyasi yerini theme' birakmistir. Bundan dolayi android'den alinmaz bu ozellik artik.-->
+        <!--android:layout_width="0dp" -> Butonlarin Responsive se-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/integralclear_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+                android:onClick="integralclearBTN"
+                android:text="@string/clear"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integralparanthesis_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+
+                android:text="@string/paranthesis"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integralexpo_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+
+                android:onClick="integralExpoBTN"
+                android:text="@string/exponent"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integraldiv_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+
+                android:text="@string/divide"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/integralseven_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+                android:onClick="integralsevenBTN"
+                android:text="@string/seven"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integraleight_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+                android:onClick="integraleightBTN"
+                android:text="@string/eight"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integralnine_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+                android:onClick="integralnineBTN"
+                android:text="@string/nine"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integralmultiply_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+
+                android:onClick="integralMultiplyBTN"
+                android:text="@string/multiply"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/integralfour_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+                android:onClick="integralfourBTN"
+                android:text="@string/four"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integralfive_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+                android:onClick="integralfiveBTN"
+                android:text="@string/five"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integralsix_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+                android:onClick="integralsixBTN"
+                android:text="@string/six"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integralsub_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+
+                android:text="@string/subtract"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/integralone_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+                android:onClick="integraloneBTN"
+                android:text="@string/one"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integraltwo_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+                android:onClick="integraltwoBTN"
+                android:text="@string/two"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integralthree_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+                android:onClick="integralthreeBTN"
+                android:text="@string/three"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integraladd_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+
+                android:text="@string/add"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/integralX_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+                android:onClick="integralXBTN"
+                android:text="@string/xValue"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integralzero_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+                android:onClick="integralzeroBTN"
+
+                android:text="@string/zero"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integralpoint_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+
+                android:onClick="integralPointBTN"
+                android:text="@string/point"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/integralequal_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+
+                android:onClick="integralEqualBTN"
+                android:text="@string/equals"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+        </TableRow>
+    </TableLayout>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/integralback_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/circle_button"
+
+        android:onClick="integralbackBTN"
+        android:src="@drawable/backspace"
+        android:text="@string/backspace"
+        app:layout_constraintBottom_toTopOf="@+id/integraltableLayout"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/integralupper_value"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/integralImage"
+        app:layout_constraintEnd_toEndOf="@+id/integralImage" />
+
+
+    <EditText
+        android:id="@+id/integrallower_value"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/integralImage"
+        app:layout_constraintTop_toBottomOf="@+id/integralImage" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="1dp"
+
+        android:text="dx"
+
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/user_definition"
+        app:layout_constraintTop_toTopOf="@+id/user_definition" />
+
+    <EditText
+        android:id="@+id/user_definition"
+        android:layout_width="197dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="-35dp"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="#FFFFFF"
+
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        app:layout_constraintDimensionRatio=""
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/integralImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/integralImage"
+        android:layout_width="156dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toStartOf="@+id/user_definition"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/integral_symbol"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

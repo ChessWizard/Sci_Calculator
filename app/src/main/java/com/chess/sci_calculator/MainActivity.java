@@ -1,16 +1,28 @@
 package com.chess.sci_calculator;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import org.mariuszgromada.math.mxparser.*;// Ekledigimiz 3. parti kutuphanenin tum icerigini projemize import ettik.
 
 import com.chess.sci_calculator.databinding.ActivityMainBinding;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -87,7 +99,46 @@ public class MainActivity extends AppCompatActivity {
             binding.sinusFunction.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(192,230,209)));
             binding.cosFunction.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(192,230,209)));
             binding.tanFunction.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(192,230,209)));
+
         }
+
+
+        // Yatay modda belirtilmeyen tasarimlar icin duzenleme yapildiginda
+        // Hata aliniyordu
+
+
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+
+            // Toogle buton ekleniyor ActionBar'imiza
+            ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this,binding.calculusDrawer,binding.toolbarCalculus,0,0);
+            binding.calculusDrawer.addDrawerListener(actionBarDrawerToggle);
+            actionBarDrawerToggle.syncState();
+
+            // Toolbar tasarimi yapiliyor
+            binding.toolbarCalculus.setBackgroundColor(Color.BLACK);
+            binding.toolbarCalculus.setTitle("Scientific Calculator");
+
+            // NavigationDrawer ile sayfalarimizi bagliyoruz
+            // Yeni guncellemelerden sonra gelen etNavigationItemSelectedListener interface'i ile
+            // NavigationDrawer icin onClick metodunu tanimladik.
+
+            binding.navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                    if(item.getItemId() == R.id.fragment_integral){
+                        Intent intent = new Intent(MainActivity.this,IntegralActivity.class);
+                        startActivity(intent);
+                    }
+
+                    return true;
+                }
+            });
+
+        }
+
+
+
 
 
     }
@@ -226,9 +277,29 @@ public class MainActivity extends AppCompatActivity {
         // Tum String icerisindeki asgida olan tum karakterler belirtilen karsiliklari ile degistirilsin.
         userExp = userExp.replaceAll("÷","/");// Kodlamadaki ÷ ifadesi yerine / karakteri gecsin
         userExp = userExp.replaceAll("×","*");// Kodlamadaki × ifadesi yerine * karakteri gecsin.
-        userExp = userExp.replaceAll("√","^(1/2)");// Kok alma ifadesi, kutuphanenin anlayacagi uslu sekilde degistirildi.
+
+
+        // Kok alma islemi icin islemler
+        String rootProcess = "^(1/2)";
+        String userProcess = userExp.substring(1);// Karekok haricindeki kisim secildi.
+        Log.e("islemler",userProcess);
+
+        // Eger kok isaretini iceriyorsa ifademiz.
+        //Sadece bu durumda gerceklessin asagidaki ifadeler
+
+        if(userExp.contains("√")){
+            userExp = userExp.replaceAll("√",rootProcess);// Kok alma ifadesi, kutuphanenin anlayacagi uslu sekilde degistirildi.
+
+            String rootDefinition = userProcess + rootProcess;
+            userExp = rootDefinition;
+        }
+
+
+
         userExp = userExp.replaceAll("log","log10");// mxparser ile uyumlu log10 ifadesidir. Bundan dolayi uyumlu olan ile arkaplanda degistirildi.
         userExp = userExp.replaceAll("π","pi");// π sayisini ek kutuphanenin algilayacagi ifade ile iliskilendirdik ve girilen degerimize de bu yeni degisimi atadik.
+
+
         // Ek kutuphanemiz icerisindeki bir siniftan nesne olusturduk.
 
         Expression expression = new Expression(userExp);// Kullanicinin tanimi(islemi) constructor parametresi olarak alinir.
@@ -346,40 +417,14 @@ public class MainActivity extends AppCompatActivity {
         // Girilen ifade uzunlugunda giderse, en saga gitmis olur Cursor.
     }
 
-
-    // Ekrani "tam ekran" halinde goruntulemek icin yontem.
     @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus) {
-            hideSystemUI();
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == R.id.fragment_integral){
+            Intent intent = new Intent(MainActivity.this,IntegralActivity.class);
+            startActivity(intent);
         }
-    }
 
-    private void hideSystemUI() {
-        // Enables regular immersive mode.
-        // For "lean back" mode, remove SYSTEM_UI_FLAG_IMMERSIVE.
-        // Or for "sticky immersive," replace it with SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-        View decorView = getWindow().getDecorView();
-        decorView.setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_IMMERSIVE
-                        // Set the content to appear under the system bars so that the
-                        // content doesn't resize when the system bars hide and show.
-                        | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        // Hide the nav bar and status bar
-                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN);
-    }
-
-    // Shows the system bars by removing all the flags
-// except for the ones that make the content appear under the system bars.
-    private void showSystemUI() {
-        View decorView = getWindow().getDecorView();
-        decorView.setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        return true;
     }
 }

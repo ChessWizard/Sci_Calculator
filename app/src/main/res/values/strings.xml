@@ -39,6 +39,7 @@
     <string name="sinusFunction">sin</string>
     <string name="cosinusFunction">cos</string>
     <string name="tangentFunction">tan</string>
+    <string name="xValue">x</string>
 
     <!--Geri tusu-->
 
@@ -46,4 +47,5 @@
 
     <!--Deger girilecek TextView icerisindeki yazi-->
     <string name="display">Enter in a value</string>
+  
 </resources>

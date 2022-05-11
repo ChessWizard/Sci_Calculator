@@ -1,35 +1,46 @@
 package com.chess.sci_calculator;
+import org.apache.commons.lang3.StringUtils;
 
 public class IntegralCalculus {
 
-    private float maxVal;// Belirli integraldeki tepe deger. Ondalikli degerler girilebilir.
-    private float minVal;// Belirli integraldeki alt deger.
+    private String upperLimit;// Belirli integraldeki tepe deger. Ondalikli degerler girilebilir.
+    private String lowerLimit;// Belirli integraldeki alt deger.
     private String userDef;// x+2 gibi sinir sartlarinin onemli oldugu ifadeler girileceginden String olmali.
 
     // Parametreli constructor olusturuldu.
-
-    public IntegralCalculus(float maxVal,float minVal,String userDef){
-        this.maxVal = maxVal;
-        this.maxVal = minVal;
+    public IntegralCalculus(String upperLimit, String lowerLimit, String userDef) {
+        if(StringUtils.isNumeric(upperLimit)){
+            this.upperLimit = upperLimit;
+        }
+        if(StringUtils.isNumeric(lowerLimit)){
+            this.lowerLimit = lowerLimit;
+        }
         this.userDef = userDef;
     }
 
     // Getter ve Setter metotlar
 
-    public float getMaxVal() {
-        return maxVal;
+
+    public String getUpperLimit() {
+        return upperLimit;
     }
 
-    public void setMaxVal(float maxVal) {
-        this.maxVal = maxVal;
+    public void setUpperLimit(String upperLimit) {
+
+        if(StringUtils.isNumeric(upperLimit)){
+            this.upperLimit = upperLimit;
+        }
+
     }
 
-    public float getMinVal() {
-        return minVal;
+    public String getLowerLimit() {
+        return lowerLimit;
     }
 
-    public void setMinVal(float minVal) {
-        this.minVal = minVal;
+    public void setLowerLimit(String lowerLimit) {
+        if(StringUtils.isNumeric(lowerLimit)){
+            this.lowerLimit = lowerLimit;
+        }
     }
 
     public String getUserDef() {

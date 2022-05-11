@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calculus_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    tools:openDrawer="start"
+    >
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
@@ -33,21 +44,6 @@
                 android:background="@drawable/circle_button"
                 android:onClick="second_power"
                 android:text="@string/secondPower"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textAllCaps="false"
-                />
-
-            <Button
-                android:id="@+id/third_power"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_margin="3dp"
-                android:layout_weight="1"
-                android:background="@drawable/circle_button"
-                android:onClick="third_power"
-                android:text="@string/thirdPower"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textAllCaps="false"
@@ -123,6 +119,20 @@
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/back_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="60dp"
+                android:background="@drawable/circle_button"
+                android:onClick="backspaceBTN"
+                android:src="@drawable/backspace"
+                android:text="@string/backspace" />
 
         </TableRow>
 
@@ -558,27 +568,15 @@
         android:textAlignment="textEnd"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:textSize="24sp"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/back_button"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_margin="2dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="60dp"
-        android:background="@drawable/circle_button"
-        android:onClick="backspaceBTN"
-        android:src="@drawable/backspace"
-        android:text="@string/backspace"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/value_text" />
+
 
     <!--android:src="@drawable/backspace" -> Bir gorunum ustune(arkaplan gorunumu) baska bir gorunum binrimek(eklemek) isterken kulanilir.-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
